@@ -2,14 +2,14 @@
 // this is the only part of the file you need to edit!
 
 const quotes = [
-  { text: "the intersection of programming, design, and art", source: "Scott" },
-  { text: "a chance for code to be wrong", source: "Sara" },
-  { text: "surprise, exploration, and aesthetic exploration", source: "Sally" },
-  { text: "process over results", source: "Sam" },
-  { text: "form over function", source: "Sean" },
-  { text: "iterative and experimental", source: "Scooby" },
-  { text: "a community of practice", source: "Seth" },
-  { text: "an opportunity to stick it to the man", source: "Shifty-eyed Susan" }
+  { text: "'Creative Coding' is a process, based on exploration, iteration, reflection and discovery, where code is used as the primary medium to create a wide range of media artifacts.", source: "Tim" },
+  { text: "(Creative Coding) Is a term we use to describe the computer programming software and people that make expressive art and design through code.", source: "Maura" },
+  { text: "(Creative Coding) is unbound by commercial constraints, fueled by curiosity and driven by an iterative process of experimentation, failure, feedback and unexpected discovery", source: "Patrik" },
+  { text: "If programming a game is like writing a book, creative coding is writing a poem.", source: "Hunter" },
+  { text: "Creative coding, fundamentally, is the practice of using computer programming to create art.", source: "Daniel" },
+  { text: "Creative coding is an approach to programming in which code is used as an expressive tool, exploring themes beyond those of traditional programming. ", source: "Take-Me-To-The-Internet" },
+  { text: "Creative coding art is a type of art created by computer programming whose goal is to create something expressive rather than functional.", source: "Yiko" },
+  { text: "Creative coding is a growing artistic field that uses computer software as a medium to develop original creative expression.", source: "Art Pack" }
 ];
 // no need to edit anything below this line! 
 // if you have made an error, you can check your history to see what might have gone wrong
