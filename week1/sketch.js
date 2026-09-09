@@ -41,10 +41,10 @@ function drawQuote() {   // draw text
   textAlign(CENTER, CENTER);
   text("Creative Coding is.....", width / 2, height / 2 - 48);
   textStyle(BOLD);
+  fill('#F98427');
   text("'" + current.text + "'", width / 2, height / 2);
   textAlign(RIGHT, CENTER);
   text("-" + current.source, width - 100, height - 100);
-
 }
 
 function windowResized() {
