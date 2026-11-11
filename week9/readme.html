@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="sketch.js"></script>
+  <title>Sketch Name</title> <!--Update your title here-->
+  <!--Add style to your code here-->
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 2em;
+      color: #6B8460;
+      background-color: #C9A0DC;
+    }
+  </style>
+</head>
+<body>
+    <h1>Colorful Waves</h1>
+    <p>For this assignment, I wanted a song to create a unique sketch of the sounds that played during the song itself. There are two main components, the FFT analysis and amplitude analysis that helped get the sketch working and creating unique sketches. .</p>
+    <p>To get the code going, the code first sets up global variables, song hold the audio file, amp is the p5 amplitude and fft is the p5.fft analyzer (Fast Fourier Transform) which splits the sound different frequency bands. Since each canvas has special dimensions depending on the song's length, we have to assign more variables, X is how far across the canvas the lines have reached, row is a 15 second strip (since each line has 15 seconds), row height is how tall each strip is in pixels, prevX, prevYUpper and prevYLower remember where the lines were on the previous frame. Finally, there is variable "started" that is a boolean variable that determines wether the song has started or not, startTime records the moment you clicked, in milliseconds, so the sketch can work out how far into the song it is, and newrow is another boolean variable that makes sure the lines are drawn into new lines. </p>
+    <p>In setup, we use async function setup() as it tells p5 to wait until the file has finished loading, where the first line assigns the song variable to the location of the song's file. Where after, the code computes the song's length and determines how many lines does it need to fit the whole song, using the ceil function to round up any necessary numbers to the next highest integer. Using the information of the lines and song's length, the code then alters the canvas' size accordingly. The code then creates new objects from the p5 FFT and amplitude functions, to connect the song to these variables. Finally, in setup, the code prints the click to start prompt to start the code.</p>
+    <p>In the draw function, the code checks wether the user pressed to initiate the code, if not, the code does nothing and waits for the user input. Then the code checks how many milliseconds has passed since the start time, which will allow the code to stop once the song ends. Current row indicates what row the code is in regards to the song's current time, using the floor function which rounds the number down to the nearest integer. The code checks wether a new line has been drawn, if so, the code sets a new row to true where it is means it is open and free to be drawn onto it. Next, the code gets the current amplitude level where it assigns it to the level variable, it also checks wether the getlevel function gave a broken number using a isfinite function. The frequencies are next, first the code gives an array of 1024 numbers that represents the frequency bands, getStrongestFrequency function gets the strongest frequency and assigns it to strongestFreq. Going back to the amplitude, the code, using map function, checks the space between the two lines using the amplitude. The same thing is done for the frequencies, where using map and log functions the code can assign certain ranges of frequencies to specific colors. The log functions makes sure there is a distinguishable differences between the representation of frequencies in terms of their color. Finally, the code draws the two lines using center position of the canvas, and the y positions of the current top and bottom positions, where if a new line isn't enforced the code takes in the current and previous x and y positions of the top and bottom lines drawing the next position. Finally, the draw functions assigns the latest positions of x and y of both lines into the previous variables. </p>
+    <p>There are two other functions help the sketch become a reality. First, the getStrongestFrequency function determines the strongest frequency from the array of frequencies given by the p5.fft. The function first has a safety check, where if there is no spectrum data, the code will return 440 Hz as a default safety. The function then goes through the individual cells of the array using a for loop, assigning the largest number within the array to the MaxIndex variable. For this part, I used the LLM's help to convert the band's position into frequency (Hertz), using the **Nyquist frequency** to convert the array into the frequency variable. Finally, the function would return the frequency variable.</p>
+    <p>Finally, the mouse press starts the sketch, by starting the song, recording the time, and begins to draw.</p>
+
+   <h2>Resources</h2>
+   <ul>
+    <li><a href="http://example.com" target="_blank">One reference</a></li>
+    <li><a href="http://example.com" target="_blank">Another reference</a></li>
+    <li><a href="http://example.com" target="_blank">And another reference</a></li>
+   </ul>
+</body>
+</html>

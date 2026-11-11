@@ -191,7 +191,7 @@ function resetTree() {
   leaves = [];   
 
   for (let i = 0; i < tips.length; i++) {
-    for (let j = 0; j < 25; j++) {
+    for (let j = 0; j < 65; j++) {
       let leaf = makeLeaf(i);
       leaf.age = random(0, leaf.lifespan * 0.8);
       leaf.size = leaf.maxSize;
